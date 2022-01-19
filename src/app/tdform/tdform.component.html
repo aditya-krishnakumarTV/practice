@@ -1,3 +1,34 @@
 <div class="container">
-    template
+  <div class="form">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Name"
+        name="username"
+        ngModel
+        #userName="ngModel"
+      />
+      <br />
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Enter Phone"
+        name="userphone"
+        ngModel
+        #userPhone="ngModel"
+      />
+      <br />
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Enter Email"
+        name="useremail"
+        ngModel
+        #userEmail="ngModel"
+      />
+      <hr />
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 </div>

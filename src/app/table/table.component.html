@@ -1,14 +1,14 @@
 <div class="container">
-    <table class="table">
-        <thead>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Email</th>
-        </thead>
-        <tbody *ngFor = "let user or users">
-            <td>{{user.name}}</td>
-            <td>{{user.phone}}</td>
-            <td>{{user.email}}</td>
-        </tbody>
-    </table>
+  <table class="table">
+    <thead>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+    </thead>
+    <tbody *ngFor="let user; or: users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.email }}</td>
+    </tbody>
+  </table>
 </div>

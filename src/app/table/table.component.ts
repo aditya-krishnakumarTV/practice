@@ -1,13 +1,11 @@
-import { Component } from "@angular/core";
-import { User } from "../shared/user.model";
+import { Component } from '@angular/core';
+import { User } from '../shared/user.model';
 
 @Component({
-    selector : "app-table",
-    templateUrl : "./table.component.html",
-    styleUrls : ["./table.component.css"]
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.css'],
 })
-export class TableComponent{
-    users : User[] = []
-
-    
+export class TableComponent {
+  users: User[] = [];
 }
