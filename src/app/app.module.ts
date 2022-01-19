@@ -1,16 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { TableComponent } from './table/table.component';
+import { TemplateDrivenFormComponent } from './tdform/tdform.component';
+import { ReactiveFormComponent } from './rform/rform.component';
+
+const appRoute: Routes = [
+  { path: 'table', component: TableComponent },
+  { path: 'tdform', component: TemplateDrivenFormComponent },
+  { path: 'rform', component: ReactiveFormComponent },
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    TableComponent,
+    TemplateDrivenFormComponent,
+    ReactiveFormComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(appRoute)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
