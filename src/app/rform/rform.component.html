@@ -15,9 +15,9 @@
       type="number"
       class="form-control"
       placeholder="Enter Phone"
-      formControlName="phone"
+      formControlName="userphone"
       />
-      <span *ngIf="userForm.get('phone').invalid && userForm.get('phone').touched">Please enter phone</span>
+      <span *ngIf="userForm.get('userphone').invalid && userForm.get('userphone').touched">Please enter phone</span>
       
       <br />
       <br />
@@ -25,9 +25,9 @@
       type="email"
       class="form-control"
       placeholder="Enter Email"
-      formControlName="email"
+      formControlName="useremail"
       />
-      <span *ngIf="userForm.get('email').invalid && userForm.get('email').touched">Please enter proper email</span>
+      <span *ngIf="userForm.get('useremail').invalid && userForm.get('useremail').touched">Please enter proper email</span>
 
       <hr />
       <button type="submit" class="btn btn-primary" [disabled] = "userForm.invalid">Submit</button>
