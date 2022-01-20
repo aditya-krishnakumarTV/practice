@@ -5,7 +5,7 @@
       <th>Phone</th>
       <th>Email</th>
     </thead>
-    <tbody *ngFor="let user; or: users">
+    <tbody *ngFor="let user of users">
       <td>{{ user.name }}</td>
       <td>{{ user.phone }}</td>
       <td>{{ user.email }}</td>

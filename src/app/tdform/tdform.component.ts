@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./tdform.component.css'],
 })
 export class TemplateDrivenFormComponent {
-  onSubmit(form : NgForm){
-    console.log(form);
+  @ViewChild('f') userForm: NgForm;
+
+  onSubmit() {
+    console.log(this.userForm);
+    this.userForm.reset();
   }
 }

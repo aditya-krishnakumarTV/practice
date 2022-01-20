@@ -1,3 +1,36 @@
 <div class="container">
-    Reactive
+  <div class="form">
+    <form (click) = "onSubmit()">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Name"
+        name="username"
+        FormControlName = "username"
+        />
+        
+        <br />
+        <br />
+        <input
+        type="number"
+        class="form-control"
+        placeholder="Enter Phone"
+        name="userphone"
+        FormControlName = "phone"
+        />
+        
+        <br />
+        <br />
+        <input
+        type="email"
+        class="form-control"
+        placeholder="Enter Email"
+        name="useremail"
+        FormControlName = "email"
+      />
+
+      <hr />
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 </div>
