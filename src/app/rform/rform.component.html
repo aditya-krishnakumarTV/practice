@@ -1,36 +1,36 @@
 <div class="container">
   <div class="form">
-    <form (click) = "onSubmit()">
+    <form [formGroup]="userForm" (ngSubmit) = "onSubmit()">
       <input
         type="text"
         class="form-control"
         placeholder="Enter Name"
-        name="username"
-        FormControlName = "username"
-        />
-        
-        <br />
-        <br />
-        <input
-        type="number"
-        class="form-control"
-        placeholder="Enter Phone"
-        name="userphone"
-        FormControlName = "phone"
-        />
-        
-        <br />
-        <br />
-        <input
-        type="email"
-        class="form-control"
-        placeholder="Enter Email"
-        name="useremail"
-        FormControlName = "email"
+        formControlName="username"
       />
+      <span *ngIf="userForm.get('username').invalid && userForm.get('username').touched">Please enter name</span>
+      
+      <br />
+      <br />
+      <input
+      type="number"
+      class="form-control"
+      placeholder="Enter Phone"
+      formControlName="phone"
+      />
+      <span *ngIf="userForm.get('phone').invalid && userForm.get('phone').touched">Please enter phone</span>
+      
+      <br />
+      <br />
+      <input
+      type="email"
+      class="form-control"
+      placeholder="Enter Email"
+      formControlName="email"
+      />
+      <span *ngIf="userForm.get('email').invalid && userForm.get('email').touched">Please enter proper email</span>
 
       <hr />
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" [disabled] = "userForm.invalid">Submit</button>
     </form>
   </div>
 </div>
