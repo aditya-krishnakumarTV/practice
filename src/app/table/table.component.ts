@@ -10,11 +10,19 @@ import { UserService } from '../shared/user.service';
 })
 export class TableComponent implements OnInit {
   users: User[] = [];
+  newUser: User = new User('test', 123, 'test@mail');
 
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
     this.users = this.userService.getUser();
     console.log(this.users);
+  }
+
+  onUpdate(i: number) {
+    this.users = this.userService.getUser();
+    this.users.splice(i, 1, this.newUser);
+    console.log(this.users);
+    
   }
 }

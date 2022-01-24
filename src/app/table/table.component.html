@@ -4,11 +4,17 @@
       <th>Name</th>
       <th>Phone</th>
       <th>Email</th>
+      <th>Action</th>
     </thead>
-    <tbody *ngFor="let user of users">
-      <td>{{ user.username }}</td>
-      <td>{{ user.userphone }}</td>
-      <td>{{ user.useremail }}</td>
+    <tbody *ngFor="let user of users; let i = index">
+      <td>{{ user.name }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.email }}</td>
+      <td>
+        <button class="btn btn-primary btn-sm" (click)="onUpdate(i)">
+          Update
+        </button>
+      </td>
     </tbody>
   </table>
 </div>
