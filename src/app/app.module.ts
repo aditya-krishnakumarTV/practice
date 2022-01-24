@@ -8,9 +8,11 @@ import { HeaderComponent } from './header/header.component';
 import { TableComponent } from './table/table.component';
 import { TemplateDrivenFormComponent } from './tdform/tdform.component';
 import { ReactiveFormComponent } from './rform/rform.component';
+import { EditTableComponent } from './table/edittable/edittable.component';
 
 const appRoute: Routes = [
-  { path: 'table', component: TableComponent },
+  { path: 'table', component: TableComponent},
+  { path: 'table/:id', component: EditTableComponent},
   { path: 'tdform', component: TemplateDrivenFormComponent },
   { path: 'rform', component: ReactiveFormComponent },
 ];
@@ -22,6 +24,7 @@ const appRoute: Routes = [
     TableComponent,
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
+    EditTableComponent
   ],
   imports: [
     BrowserModule,
