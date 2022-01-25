@@ -11,7 +11,6 @@ import { UserService } from '../shared/user.service';
 })
 export class TableComponent implements OnInit {
   users: User[] = [];
-  newUser: User = new User('test', 123, 'test@mail');
 
   constructor(private userService: UserService ,private router : Router) {}
 
@@ -24,5 +23,9 @@ export class TableComponent implements OnInit {
     // this.users = this.userService.getUser();
     // this.users.splice(i, 1, this.newUser);
     this.router.navigate(["/table", i],)
+  }
+
+  onDelete(i : number){
+    this.userService.deleteUserById(i)
   }
 }

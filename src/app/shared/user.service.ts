@@ -20,4 +20,8 @@ export class UserService {
     const singleUser = this.localUser.find((_, index) => index == id);
     return singleUser;
   }
+
+  deleteUserById(id: number){
+    this.localUser.splice(id,1)
+  }
 }
