@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { User } from '../shared/user.model';
 import { UserService } from '../shared/user.service';
@@ -12,7 +13,7 @@ export class TableComponent implements OnInit {
   users: User[] = [];
   newUser: User = new User('test', 123, 'test@mail');
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService ,private router : Router) {}
 
   ngOnInit(): void {
     this.users = this.userService.getUser();
@@ -20,9 +21,8 @@ export class TableComponent implements OnInit {
   }
 
   onUpdate(i: number) {
-    this.users = this.userService.getUser();
-    this.users.splice(i, 1, this.newUser);
-    console.log(this.users);
-    
+    // this.users = this.userService.getUser();
+    // this.users.splice(i, 1, this.newUser);
+    this.router.navigate(["/table", i],)
   }
 }
