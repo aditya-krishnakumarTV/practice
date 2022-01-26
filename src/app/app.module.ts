@@ -11,8 +11,9 @@ import { ReactiveFormComponent } from './rform/rform.component';
 import { EditTableComponent } from './table/edittable/edittable.component';
 
 const appRoute: Routes = [
-  { path: 'table', component: TableComponent},
-  { path: 'table/:id', component: EditTableComponent},
+  { path: 'table', component: TableComponent , children : [
+    { path: ':id', component: EditTableComponent},
+  ]},
   { path: 'tdform', component: TemplateDrivenFormComponent },
   { path: 'rform', component: ReactiveFormComponent },
 ];

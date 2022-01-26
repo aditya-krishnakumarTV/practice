@@ -17,7 +17,7 @@ export class UserService {
   }
 
   getUserById(id: number) {
-    const singleUser = this.localUser.find((_, index) => index == id);
+    const singleUser = this.localUser.find((u, index) => index == id);
     return singleUser;
   }
 
