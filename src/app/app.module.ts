@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DxDataGridModule } from 'devextreme-angular';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -32,6 +33,7 @@ const appRoute: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoute),
     ReactiveFormsModule,
+    DxDataGridModule
   ],
   providers: [],
   bootstrap: [AppComponent],
