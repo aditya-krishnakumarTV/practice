@@ -1,0 +1,15 @@
+<div class="container">
+  <dx-data-grid id="dataGrid" [dataSource]="users">
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-search-panel [visible]="true"></dxo-search-panel>
+    <dxo-editing
+      mode="popup"
+      [allowUpdating]="true"
+      [allowAdding]="true"
+      [allowDeleting]="true"
+    ></dxo-editing>
+    <dxi-column dataField="name"></dxi-column>
+    <dxi-column dataField="phone"></dxi-column>
+    <dxi-column dataField="email"></dxi-column>
+  </dx-data-grid>
+</div>

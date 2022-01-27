@@ -20,8 +20,6 @@ export class TableComponent implements OnInit {
   }
 
   onUpdate(i: number) {
-    // this.users = this.userService.getUser();
-    // this.users.splice(i, 1, this.newUser);
     this.router.navigate(["/table", i],)
   }
 
