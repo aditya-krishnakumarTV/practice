@@ -10,6 +10,7 @@ import { TableComponent } from './table/table.component';
 import { TemplateDrivenFormComponent } from './tdform/tdform.component';
 import { ReactiveFormComponent } from './rform/rform.component';
 import { EditTableComponent } from './table/edittable/edittable.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoute: Routes = [
   { path: 'table', component: TableComponent , children : [
@@ -33,7 +34,8 @@ const appRoute: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoute),
     ReactiveFormsModule,
-    DxDataGridModule
+    DxDataGridModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
