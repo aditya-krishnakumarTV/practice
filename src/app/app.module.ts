@@ -14,6 +14,11 @@ import { TemplateDrivenFormComponent } from './tdform/tdform.component';
 import { ReactiveFormComponent } from './rform/rform.component';
 import { EditTableComponent } from './table/edittable/edittable.component';
 import { DevxGridComponent } from './devxgrid/devxgrid.component';
+import { NavComponent } from './header/nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 
 const appRoute: Routes = [
   {
@@ -35,6 +40,7 @@ const appRoute: Routes = [
     ReactiveFormComponent,
     EditTableComponent,
     DevxGridComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +51,10 @@ const appRoute: Routes = [
     MatToolbarModule,
     MatListModule,
     BrowserAnimationsModule,
+    LayoutModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
