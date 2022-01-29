@@ -5,6 +5,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DxDataGridModule } from 'devextreme-angular';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -15,10 +21,6 @@ import { ReactiveFormComponent } from './rform/rform.component';
 import { EditTableComponent } from './table/edittable/edittable.component';
 import { DevxGridComponent } from './devxgrid/devxgrid.component';
 import { NavComponent } from './header/nav/nav.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
 
 const appRoute: Routes = [
   {
@@ -55,6 +57,8 @@ const appRoute: Routes = [
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

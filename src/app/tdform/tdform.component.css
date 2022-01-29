@@ -2,10 +2,15 @@
     margin-top: 50px;
 }
 
-.error{
+/* .error{
     color: red;
 }
 
 input.ng-invalid.ng-touched{
     border-color: red;
+} */
+
+.mat-form-field{
+    width : 100%;
+    margin-top: 10px;
 }

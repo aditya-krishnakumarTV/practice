@@ -1,52 +1,56 @@
 <div class="container">
   <div class="form">
     <form #f="ngForm" (ngSubmit)="onSubmit()">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Enter Name"
-        name="name"
-        ngModel
-        required
-        #userName="ngModel"
-      />
-      <span class="error" *ngIf="userName.invalid && userName.touched">
-        Please Enter Name!
-      </span>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Name</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder=""
+          name="name"
+          ngModel
+          required
+          #userName="ngModel"
+        />
+        <mat-error *ngIf="userName.invalid && userName.touched">
+          Please Enter Name!
+        </mat-error>
+      </mat-form-field>
 
-      <br />
-      <br />
-      <input
-        type="number"
-        class="form-control"
-        placeholder="Enter Phone"
-        name="phone"
-        ngModel
-        required
-        #userPhone="ngModel"
-      />
-      <span class="error" *ngIf="userPhone.invalid && userPhone.touched">
-        Please Enter Phone!
-      </span>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Phone</mat-label>
+        <input
+          type="number"
+          matInput
+          placeholder=""
+          name="phone"
+          ngModel
+          required
+          #userPhone="ngModel"
+        />
+        <mat-error *ngIf="userPhone.invalid && userPhone.touched">
+          Please Enter Phone!
+        </mat-error>
+      </mat-form-field>
 
-      <br />
-      <br />
-      <input
-        type="email"
-        class="form-control"
-        placeholder="Enter Email"
-        name="email"
-        ngModel
-        required
-        email
-        #userEmail="ngModel"
-      />
-      <span class="error" *ngIf="userEmail.invalid && userEmail.touched">
-        Please Enter Email!
-      </span>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Email</mat-label>
+        <input
+          type="email"
+          matInput
+          placeholder=""
+          name="email"
+          ngModel
+          required
+          email
+          #userEmail="ngModel"
+        />
+        <mat-error *ngIf="userEmail.invalid && userEmail.touched">
+          Please Enter Email!
+        </mat-error>
+      </mat-form-field>
 
-      <hr />
-      <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+      <button mat-raised-button color="primary" [disabled]="f.invalid">
         Submit
       </button>
     </form>
