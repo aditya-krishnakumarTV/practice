@@ -11,6 +11,7 @@ import { UserService } from '../shared/user.service';
 })
 export class TableComponent implements OnInit {
   users: User[] = [];
+  columnsForTable = ['name' , 'phone' , 'email']
 
   constructor(private userService: UserService ,private router : Router) {}
 
