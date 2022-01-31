@@ -1,36 +1,41 @@
 <div class="container">
   <div class="form">
-    <form [formGroup]="userForm" (ngSubmit) = "onSubmit()">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Enter Name"
-        formControlName="name"
-      />
-      <span *ngIf="userForm.get('name').invalid && userForm.get('name').touched">Please enter name</span>
-      
-      <br />
-      <br />
-      <input
-      type="number"
-      class="form-control"
-      placeholder="Enter Phone"
-      formControlName="phone"
-      />
-      <span *ngIf="userForm.get('phone').invalid && userForm.get('phone').touched">Please enter phone</span>
-      
-      <br />
-      <br />
-      <input
-      type="email"
-      class="form-control"
-      placeholder="Enter Email"
-      formControlName="email"
-      />
-      <span *ngIf="userForm.get('email').invalid && userForm.get('email').touched">Please enter proper email</span>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Name</mat-label>
+        <input type="text" matInput placeholder="" formControlName="name" />
+        <mat-error
+          *ngIf="userForm.get('name').invalid && userForm.get('name').touched"
+          >Please enter name</mat-error
+        >
+      </mat-form-field>
 
-      <hr />
-      <button type="submit" class="btn btn-primary" [disabled] = "userForm.invalid">Submit</button>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Phone</mat-label>
+        <input type="number" matInput placeholder="" formControlName="phone" />
+        <mat-error
+          *ngIf="userForm.get('phone').invalid && userForm.get('phone').touched"
+          >Please enter phone</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Email</mat-label>
+        <input type="email" matInput placeholder="" formControlName="email" />
+        <mat-error
+          *ngIf="userForm.get('email').invalid && userForm.get('email').touched"
+          >Please enter proper email</mat-error
+        >
+      </mat-form-field>
+
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="userForm.invalid"
+      >
+        Submit
+      </button>
     </form>
   </div>
 </div>
